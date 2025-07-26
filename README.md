@@ -1,36 +1,160 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Latency Topology Visualizer
 
-## Getting Started
+The **Latency Topology Visualizer** is a powerful interactive web application that displays **real-time** and **historical** latency data between major cryptocurrency exchanges and cloud providers like **AWS**, **GCP**, and **Azure** on a **3D globe** using **CesiumJS**.
 
-First, run the development server:
+> 📊 Built with Next.js, React, TypeScript, Tailwind CSS, and CesiumJS.
+
+---
+
+## 🚀 Demo
+
+[Insert demo video or GIF here]
+
+---
+
+## 📌 Features
+
+- 🗺️ **3D Globe View** using CesiumJS  
+- 🌍 **2D & Columbus Views** available for flexible exploration  
+- 📍 **Exchange Locations** shown with colored markers based on cloud provider  
+- 🔁 **Real-Time Latency** lines update every 5 seconds  
+- 📊 **Historical Latency Chart** with selectable time ranges (1hr, 24hrs, 7d, 30d)  
+- 📲 **Responsive UI** for both desktop and mobile  
+- 🧭 **Interactive Controls**: Rotate, zoom, pan with mouse or touch  
+- 🧪 **Mock Data** simulates realistic latency values
+
+---
+
+## 🧑‍💻 Technologies Used
+
+- **Next.js** – Server-rendered React framework  
+- **React** – UI rendering and component-based architecture  
+- **CesiumJS** – 3D geospatial globe rendering  
+- **Tailwind CSS** – Utility-first styling  
+- **TypeScript** – Strong typing and code safety  
+- **Recharts** – For visualizing historical data  
+- **Mock APIs / JSON** – Simulated real-time and historical latency
+
+---
+
+## 📂 Folder Structure
+
+project-root/ ├── app/ │   ├── page.tsx              # Main page with layout and map │   └── globals.css           # Global styling ├── components/ │   ├── Globe.tsx             # Renders the Cesium 3D globe │   ├── LatencyLayer.tsx      # Shows animated latency lines │   ├── HistoricalLatencyChart.tsx  # Latency stats visualization │   ├── PairSelector.tsx      # Dropdown for selecting exchange pairs │   └── ControlPanel.tsx      # Toggles chart visibility ├── src/ │   ├── data/ │   │   ├── cloudRegions.ts         # Cloud provider region locations │   │   ├── exchangeServers.ts      # Exchange location metadata │   │   ├── mockLatency.ts          # Simulated latency values (real-time) │   │   └── historical-latency.ts   # Simulated latency stats (historical) │   └── types/ │       ├── filters.ts              # Type definitions for filters │       └── cesium.d.ts             # CesiumJS typings for TS ├── public/ │   └── icons/                      # Cloud provider marker icons ├── .env.local                      # Environment variables (e.g., Cesium token) ├── tailwind.config.js             # Tailwind CSS configuration ├── next.config.ts                 # Next.js project configuration ├── tsconfig.json                  # TypeScript project settings └── README.md                      # Project documentation
+
+---
+
+## 📷 Project Screenshots
+
+
+### 🌐 3D Globe View
+![3D Globe](./public/screenshots/3D-Globe.png)
+
+### 🔍 Zoomed-In View
+![Zoom In](./public/screenshots/Zoom-in-View.png)
+
+### 🗺️ 2D View
+![2D View](./public/screenshots/2D-View.png)
+
+### 🧭 Columbus View
+![Columbus View](./public/screenshots/Columbus-View.png)
+
+### ⚡ Real-Time Latency  
+![Real-Time Latency](./public/screenshots/Real-Time-Latency.png)
+
+### 📱 Samsung Galaxy S8+ View
+![Mobile View](./public/screenshots/Samsung-Galaxy-S8+.png)
+
+### 📱 iPad Mini View
+![iPad Mini](./public/screenshots/iPad-Mini.png)
+
+### 📊 Historical Chart - iPad Mini
+![Historical Chart - iPad Mini](./public/screenshots/Historical-Chart-iPadMini.png)
+
+### ⏱️ Historical Latency - 1 Hour
+![1 Hour](./public/screenshots/Historical-Latency-Chart-1hr.png)
+
+### 🕖 Historical Latency - 7 Days
+![7 Days](./public/screenshots/Historical-Latency-Chart-7days.png)
+
+### 📆 Historical Latency - 30 Days
+![30 Days](./public/screenshots/Historical-Latency-Chart-30days.png)
+
+### 🕛 Historical Latency - 24 Hours
+![24 Hours](./public/screenshots/Historical-Latency-Chart-24hrs.png)
+
+
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/your-username/latency-visualizer.git
+cd latency-visualizer
+
+
+2. Install Dependencies
+
+npm install
+
+
+3. Setup Environment
+
+Create a .env.local file and add your Cesium Ion access token:
+
+NEXT_PUBLIC_CESIUM_ION_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2N2M5MTRjZS0yZTkyLTRjOWEtODZkOS1mNGJhNTQ0ODM4YjQiLCJpZCI6MzIzNzk4LCJpYXQiOjE3NTMxNzY1Mzd9.4fPTFSe54VmZYIJtSE0IYF0nqdiKm9PfGb-Zp6Wx460
+
+You can get one at: https://cesium.com/ion/
+
+
+4. Run the Development Server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+📦 Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+npm run build
+npm start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+✅ Future Improvements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Integrate real API data from cloud or monitoring services
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Authentication and user-customized views
+
+Filter latency by region or provider
+
+Improve visual transitions and tooltips
+
+
+
+---
+
+🧑‍🎓 Author
+
+Aditi Dwivedi
+MCA Graduate | Front-end Developer
+LinkedIn | https://github.com/Aditi71 | aditi441401@gmail.com
+
+
+---
+
+📝 License
+
+This project is for educational and demonstration purposes only.
+
+
+---
+
+Would you like me to generate this README as a downloadable `.md` file for y submission?
