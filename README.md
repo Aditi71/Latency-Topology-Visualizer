@@ -4,11 +4,6 @@ The **Latency Topology Visualizer** is a powerful interactive web application th
 
 > 📊 Built with Next.js, React, TypeScript, Tailwind CSS, and CesiumJS.
 
----
-
-## 🚀 Demo
-
-[Insert demo video or GIF here]
 
 ---
 
@@ -153,8 +148,3 @@ LinkedIn | https://github.com/Aditi71 | aditi441401@gmail.com
 📝 License
 
 This project is for educational and demonstration purposes only.
-
-
----
-
-Would you like me to generate this README as a downloadable `.md` file for y submission?
