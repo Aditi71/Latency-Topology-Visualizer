@@ -32,12 +32,6 @@ The **Latency Topology Visualizer** is a powerful interactive web application th
 
 ---
 
-## 📂 Folder Structure
-
-project-root/ ├── app/ │   ├── page.tsx              # Main page with layout and map │   └── globals.css           # Global styling ├── components/ │   ├── Globe.tsx             # Renders the Cesium 3D globe │   ├── LatencyLayer.tsx      # Shows animated latency lines │   ├── HistoricalLatencyChart.tsx  # Latency stats visualization │   ├── PairSelector.tsx      # Dropdown for selecting exchange pairs │   └── ControlPanel.tsx      # Toggles chart visibility ├── src/ │   ├── data/ │   │   ├── cloudRegions.ts         # Cloud provider region locations │   │   ├── exchangeServers.ts      # Exchange location metadata │   │   ├── mockLatency.ts          # Simulated latency values (real-time) │   │   └── historical-latency.ts   # Simulated latency stats (historical) │   └── types/ │       ├── filters.ts              # Type definitions for filters │       └── cesium.d.ts             # CesiumJS typings for TS ├── public/ │   └── icons/                      # Cloud provider marker icons ├── .env.local                      # Environment variables (e.g., Cesium token) ├── tailwind.config.js             # Tailwind CSS configuration ├── next.config.ts                 # Next.js project configuration ├── tsconfig.json                  # TypeScript project settings └── README.md                      # Project documentation
-
----
-
 ## 📷 Project Screenshots
 
 
